@@ -8,6 +8,12 @@ img{
   max-width: 100%;
 }
 
-.card{
-  height: 500px;
+.card-body{
+  padding-top: 40%;
 }
+
+.image-container{
+  height: 200px;
+  text-align: center;
+}
+
