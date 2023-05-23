@@ -8,6 +8,32 @@
   <title>Pet Store</title>
 </head>
 <body>
-  
+<div class="container">
+  <h1>Prodotti per cani e gatti</h1>
+  <div class="row">
+    <?php
+      //include classi dei prodotti
+      require_once 'classes/Product.php';
+      require_once 'classes/DogProduct.php';
+      require_once 'classes/CatProduct.php';
+
+      //oggetti cani
+      $dogFood = new DogProduct('Cibo per cani', 'https://m.media-amazon.com/images/I/711K-07keuS._AC_SX522_.jpg', 14.99);
+      $dogToy = new DogProduct('Giocattolo per cani', 'https://staticfanpage.akamaized.net/wp-content/uploads/sites/5/2020/04/1.jpg', 8.99);
+      $dogBed = new DogProduct('Cuccia per cani', 'https://m.media-amazon.com/images/I/71-tsDiw8iL._AC_SY355_.jpg', 39.99);
+      $products[] = $dogFood;
+      $products[] = $dogToy;
+      $products[] = $dogBed;
+      
+      //oggetti gatti
+      $catFood = new CatProduct('Cibo per gatti', 'https://media.dm-static.com/images/f_auto,q_auto,c_fit,h_1200,w_1200/v1675352077/products/pim/8009470059817_B1_ITA/lechat-excellence-cibo-secco-per-gatti-sterilizzati-al-gusto-pollo', 9.99);
+      $catToy = new CatProduct('Giocattolo per gatti', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg7x5mO8FQIXGaZRiz8Lbl6d04RrqkgDlljQ&usqp=CAU', 3.99);
+      $catBed = new CatProduct('Cuccia per gatti', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDPMT_WOt413CLVg1H0nr7xu3Wydm11NRqXg&usqp=CAU', 19.99);
+      $products[] = $catFood;
+      $products[] = $catToy;
+      $products[] = $catBed;
+      ?>
+    </div>
+  </div>
 </body>
 </html>
